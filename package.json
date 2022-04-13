@@ -1,0 +1,23 @@
+{
+  "name": "hugo-jsbuild",
+  "version": "1.0.0",
+  "description": "starter hugo site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server --disableFastRender --gc",
+    "build":"hugo -gc --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwakunibob/hugo-jsbuild.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwakunibob/hugo-jsbuild/issues"
+  },
+  "homepage": "https://github.com/iwakunibob/hugo-jsbuild#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
