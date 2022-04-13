@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "hugo server --disableFastRender --gc",
-    "build":"hugo -gc --minify"
+    "build": "hugo --gc --minify"
   },
   "repository": {
     "type": "git",
