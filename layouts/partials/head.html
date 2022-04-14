@@ -6,16 +6,4 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 {{- /*  bootstrap js  */ -}}
-{{- /*  production options  */ -}}
-{{- $opts := dict "minify" true -}}
-{{- /*  development options  */ -}}
-{{- if eq hugo.Environment "development" -}}
-  {{- $opts = dict "sourceMap" "inline" -}}
-{{- end -}}
-{{- $built := resources.Get "js/main.js" | js.Build $opts | fingerprint }}
-<script type="text/javascript" src="{{ $built.RelPermalink }}" integrity="{{ $built.Data.Integrity }}" defer></script>
-
-{{/*  
-{{ $js := resources.Get "js/global.js" }}
-{{ $secureJS := $js | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>  */}}
+{{ partial "esbuild" "js/main.js"}}
