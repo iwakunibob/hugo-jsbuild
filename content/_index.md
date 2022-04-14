@@ -14,19 +14,19 @@ btn2:
 cardsTitle: Our Services
 cards:
 - title: Card 1 Title
-  img: /img/placeholder1.jpg
+  img: img/placeholder1.jpg
   text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto modi placeat corrupti tempora quod quidem praesentium impedit. Rem, sapiente eius?
   btn:
     text: Button 1 text
     url: "#"
 - title: Card 2 Title
-  img: /img/placeholder2.jpg
+  img: img/placeholder2.jpg
   text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto modi placeat corrupti tempora quod quidem praesentium impedit. Rem, sapiente eius?
   btn:
     text: Button 2 text
     url: "#"
 - title: Card 3 Title
-  img: /img/placeholder3.jpg
+  img: img/placeholder3.jpg
   text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto modi placeat corrupti tempora quod quidem praesentium impedit. Rem, sapiente eius?
   btn:
     text: Button 3 text
