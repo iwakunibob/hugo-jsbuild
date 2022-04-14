@@ -11,7 +11,7 @@
 
 {{/* development options */}}
 {{- if eq hugo.Environment "development" -}}
-{{- $opts := dict "sourceMap" "inline" -}}
+{{- $opts = dict "sourceMap" "inline" -}}
 {{- end -}}
 {{ $built := resources.Get "js/main.js" | js.Build }}
 <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
