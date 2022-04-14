@@ -8,10 +8,9 @@
 {{- /*  bootstrap js  */ -}}
 {{/*  production options  */}}
 {{- $opts := dict "minify" true -}}
-
-{{/* development options */}}
+{{- /*  development options  */ -}}
 {{- if eq hugo.Environment "development" -}}
 {{- $opts = dict "sourceMap" "inline" -}}
 {{- end -}}
-{{ $built := resources.Get "js/main.js" | js.Build }}
+{{- $built := resources.Get "js/main.js" | js.Build $opts }}
 <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
