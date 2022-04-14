@@ -12,5 +12,10 @@
 {{- if eq hugo.Environment "development" -}}
   {{- $opts = dict "sourceMap" "inline" -}}
 {{- end -}}
-{{- $built := resources.Get "js/main.js" | js.Build $opts }}
-<script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+{{- $built := resources.Get "js/main.js" | js.Build $opts | fingerprint }}
+<script type="text/javascript" src="{{ $built.RelPermalink }}" integrity="{{ $built.Data.Integrity }}" defer></script>
+
+{{/*  
+{{ $js := resources.Get "js/global.js" }}
+{{ $secureJS := $js | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>  */}}
